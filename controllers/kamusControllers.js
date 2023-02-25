@@ -15,7 +15,7 @@ module.exports = {
   all: async (req, res) => {
     try {
       const offset = +req.query.offset || 0;
-      const size = +req.query.size || 20;
+      const size = +req.query.limit || 20;
       let prev = null;
       let next = null;
 
@@ -37,11 +37,11 @@ module.exports = {
       });
 
       if (offset - size >= 0) {
-        prev = `${API_URL}/words/?offset=${offset - size}&size=${size}`;
+        prev = `${API_URL}/words/?offset=${offset - size}&limit=${size}`;
       }
 
       if (offset / size - 1 < Math.floor(count / size)) {
-        next = `${API_URL}/words/?offset=${offset + size}&size=${size}`;
+        next = `${API_URL}/words/?offset=${offset + size}&limit=${size}`;
       }
 
       res.status(200).send({ count, data, prev, next });
