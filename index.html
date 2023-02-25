@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>STB15 API</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <div class="container">
+      <div class="card shadow p-5">
+        <h1 class="text-primary">Welcome to Standard Text Book 2015 API!</h1>
+
+        <div class="mt-3">
+          <h3><span class="badge bg-primary text-white px-2">GET</span></h3>
+
+          <div class="row border">
+            <div class="col-3 border-right py-3"><span>Routes</span></div>
+            <div class="col-9 py-3"><span>Response</span></div>
+          </div>
+
+          <div class="row border">
+            <div class="col-3 border-right py-3">
+              <div>
+                <span class="badge bg-secondary text-white">/words</span>
+              </div>
+              <div>
+                <span class="badge bg-secondary text-white"
+                  >/words/?offset=numb&size=numb</span
+                >
+              </div>
+            </div>
+            <div class="col-9 py-3">
+              <div class="row">
+                <div class="col-4">
+                  <span>count</span>
+                </div>
+                <div class="col-8">
+                  <span>: total kosakata</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <span>data</span>
+                </div>
+                <div class="col-8">
+                  <span>: data kosakata</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <span>prev</span>
+                </div>
+                <div class="col-8">
+                  <span>: halaman sebelumnya</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <span>next</span>
+                </div>
+                <div class="col-8">
+                  <span>: halaman selanjutnya</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row border">
+            <div class="col-3 border-right py-3">
+              <span class="badge bg-secondary text-white">/word/?key=word</span>
+            </div>
+            <div class="col-9 py-3">
+              <div class="row">
+                <div class="col-4">
+                  <span>count</span>
+                </div>
+                <div class="col-8">
+                  <span>: total hasil pencarian</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <span>data</span>
+                </div>
+                <div class="col-8">
+                  <span>: data pencarian</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row border">
+            <div class="col-3 border-right py-3">
+              <span class="badge bg-secondary text-white">/words/5</span>
+            </div>
+            <div class="col-9 py-3">
+              <div class="row">
+                <div class="col-4">
+                  <span>count</span>
+                </div>
+                <div class="col-8">
+                  <span>: total bab 5</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <span>data</span>
+                </div>
+                <div class="col-8">
+                  <span>: data bab 5</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row border">
+            <div class="col-3 border-right py-3">
+              <div>
+                <span class="badge bg-secondary text-white">/antonyms</span>
+              </div>
+              <div>
+                <span class="badge bg-secondary text-white"
+                  >/antonyms/?offset=numb&size=numb</span
+                >
+              </div>
+            </div>
+            <div class="col-9 py-3">
+              <div class="row">
+                <div class="col-4">
+                  <span>count</span>
+                </div>
+                <div class="col-8">
+                  <span>: total kosakata antonim</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <span>data</span>
+                </div>
+                <div class="col-8">
+                  <span>: data kosakata antonim</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <span>prev</span>
+                </div>
+                <div class="col-8">
+                  <span>: halaman sebelumnya</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <span>next</span>
+                </div>
+                <div class="col-8">
+                  <span>: halaman selanjutnya</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row border">
+            <div class="col-3 border-right py-3">
+              <span class="badge bg-secondary text-white"
+                >/antonym/?key=word</span
+              >
+            </div>
+            <div class="col-9 py-3">
+              <div class="row">
+                <div class="col-4">
+                  <span>count</span>
+                </div>
+                <div class="col-8">
+                  <span>: total hasil pencarian</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <span>data</span>
+                </div>
+                <div class="col-8">
+                  <span>: data pencarian</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row border">
+            <div class="col-3 border-right py-3">
+              <div>
+                <span class="badge bg-secondary text-white">/synonyms</span>
+              </div>
+              <div>
+                <span class="badge bg-secondary text-white"
+                  >/synonyms/?offset=numb&size=numb</span
+                >
+              </div>
+            </div>
+            <div class="col-9 py-3">
+              <div class="row">
+                <div class="col-4">
+                  <span>count</span>
+                </div>
+                <div class="col-8">
+                  <span>: total kosakata sinonim</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <span>data</span>
+                </div>
+                <div class="col-8">
+                  <span>: data kosakata sinonim</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <span>prev</span>
+                </div>
+                <div class="col-8">
+                  <span>: halaman sebelumnya</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <span>next</span>
+                </div>
+                <div class="col-8">
+                  <span>: halaman selanjutnya</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row border">
+            <div class="col-3 border-right py-3">
+              <span class="badge bg-secondary text-white"
+                >/synonym/?key=word</span
+              >
+            </div>
+            <div class="col-9 py-3">
+              <div class="row">
+                <div class="col-4">
+                  <span>count</span>
+                </div>
+                <div class="col-8">
+                  <span>: total hasil pencarian sinonim</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <span>data</span>
+                </div>
+                <div class="col-8">
+                  <span>: data pencarian sinonim</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
