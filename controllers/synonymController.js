@@ -8,6 +8,7 @@ const {
   startAfter,
   limit,
 } = require("firebase/firestore");
+const { API_URL } = require("../constants");
 const db = require("../db");
 
 module.exports = {
@@ -36,15 +37,11 @@ module.exports = {
       });
 
       if (offset - size >= 0) {
-        prev = `${process.env.API_URL}/synonyms/?offset=${
-          offset - size
-        }&size=${size}`;
+        prev = `${API_URL}/synonyms/?offset=${offset - size}&size=${size}`;
       }
 
       if (offset / size < Math.floor(count / size)) {
-        next = `${process.env.API_URL}/synonyms/?offset=${
-          offset + size
-        }&size=${size}`;
+        next = `${API_URL}/synonyms/?offset=${offset + size}&size=${size}`;
       }
 
       res.status(200).send({ count, data, prev, next });
